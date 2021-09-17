@@ -1,9 +1,9 @@
 #include "opencv2/highgui/highgui.hpp" //определяет кросс-платформенные функции взаимодействия с оконной системой
 #include "opencv2/imgproc/imgproc.hpp" //определяет основные/традиционные функции цифровой обработки изображений: отрисовка кривых и тому подобное
 
-#include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream> //библиотека для ввода-вывода в языке С++
+#include <stdio.h> //библиотека ввода и вывода
+#include <stdlib.h> //библиотека, содержащая в себе функции, занимающиеся выделением памяти, контролем процесса выполнения программы, преобразованием типов и другие
 #include <string>
 
 using namespace cv; //пространство имён OpenCV
@@ -99,8 +99,8 @@ int main(int argc, char** argv)
 	for (int i = 0; i < contours.size(); i++)
 	{
 		Scalar color = Scalar(rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255));
-		drawContours(drawning, contours, i, color, 2, 8, hierarchy, 0, Point());
-		circle(drawning, mc[i], 4, color, -1, 5, 0); //цикл рисующий контуры и определяюий для них цвета случайным образом
+		drawContours(drawning, contours, i, color, 2, 5, hierarchy, 0, Point()); //цифра после "color" - толщина контуров, потом - тип линий, и последнее - максимальный уровень нарисованных контуров.
+		circle(drawning, mc[i], 4, color, -1, 8, 0); //цикл рисующий контуры и определяюий для них цвета случайным образом (число после "mc" - радиус, потом заливка центров масс, далее чёткость и последнее - расположение относительно окна
 	}
 
 	namedWindow("Контуры", WINDOW_AUTOSIZE);
