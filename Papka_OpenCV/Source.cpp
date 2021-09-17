@@ -1,4 +1,4 @@
-#include "opencv2/highgui/highgui.hpp" //
+#include "opencv2/highgui/highgui.hpp" //определяет кросс-платформенные функции взаимодействия с оконной системой
 #include "opencv2/imgproc/imgproc.hpp"
 
 #include <iostream>
