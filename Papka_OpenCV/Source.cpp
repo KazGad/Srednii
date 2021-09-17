@@ -1,49 +1,58 @@
-#include "opencv2/highgui/highgui.hpp"
-#include "opencv2/imgproc/imgproc.hpp"
+#include "opencv2/highgui/highgui.hpp" //определяет кросс-платформенные функции взаимодействия с оконной системой
+#include "opencv2/imgproc/imgproc.hpp" //определяет основные/традиционные функции цифровой обработки изображений: отрисовка кривых и тому подобное
 
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
 
-using namespace cv;
-using namespace std;
+using namespace cv; //пространство имён OpenCV
+using namespace std; //пространство имён С++
 
 int main(int argc, char** argv)
 {
 	int height = 1080;
 	int width = 1920;
-	Mat img(height, width, CV_8UC3);
-	setlocale(LC_ALL, "Russian");
+	Mat img(height, width, CV_8UC3); //создаётся изображение заданной ширены и высоты с 3-х канальным цветом
+	setlocale(LC_ALL, "Russian"); //переводит на русский текст введённый в консоли
 
-	Point textOrg(100, img.rows / 2);
-	int fontFace = FONT_HERSHEY_SCRIPT_SIMPLEX;
-	double fontScale = 2;
-	int fontSize = 25;
-	Scalar color(200, 100, 50);
-	putText(img, "OpenCV Step By Step", textOrg, fontFace, fontFace, color, fontSize);
-
-	imshow("Hello World", img);
-
-
-	img = imread("maxresdefault.jpg", 1);
+	Point textOrg(100, img.rows / 2); //изменение положения текста по вертикали
+	int fontFace = FONT_HERSHEY_SCRIPT_SIMPLEX; //Стиль текста
 	
 	char filename[80];
 	cout << "Введите имя файла, в который хотите внести изменения, и нажмите Enter" << endl;
 	cin.getline(filename, 80);
 	cout << "Открыт файл";
-	cout << filename << endl;
+	cout << filename << endl; //запрашиваем у пользователя название файла
+
+	int fontScale;
+	cout << "Введите размер шрифта и нажмите Enter" << endl;
+	cin>>fontScale;
+	cout << "Изменён шрифт на: " << fontScale << endl; //запрашиваем у пользователя размер шрифта
+
+	int fontSize;
+	cout << "Введите ширину шрифта и нажмите Enter" << endl;
+	cin >> fontSize;
+	cout << "Изменён шрифт на: " << fontSize << endl; //запрашиваем у пользователя ширину шрифта
 	
+	Scalar color(200, 100, 50); //цвет текста
+	
+	putText(img, "OpenCV Step By Step", textOrg, fontFace, fontScale, color, fontSize); //создаём текст используя все переменные введёные для него ранее
+
+	imshow("Hello World", img); //название окна
+
+	img = imread(filename, 1); //сохраняет введённое изображение указанное пользователем в матрицу
+
 	namedWindow("Исходное изображение", WINDOW_AUTOSIZE);
-	imshow("Исходное изображение", img);
+	imshow("Исходное изображение", img); //называет и выводит окно с изображением
 
 	Mat src_gary;
 	Mat _img;
-	Mat canny_output;
+	Mat canny_output; //матрицы
 
 	cvtColor(img, src_gary, COLOR_RGB2GRAY);
 	blur(src_gary, src_gary, Size(3, 3));
-	
+
 	double otsu_thresh_val = threshold(src_gary, img, 0, 255, THRESH_BINARY | THRESH_OTSU);
 	double high_thresh_val = otsu_thresh_val, lower_thresh_val = otsu_thresh_val * 0.5;
 	cout << otsu_thresh_val;
@@ -53,7 +62,7 @@ int main(int argc, char** argv)
 	imshow("Серое изображение", canny_output);
 	imwrite("canny_output.jpg", canny_output);
 
-	
+
 	RNG rng(12345);
 	vector<vector<Point>> contours;
 	vector<Vec4i> hierarchy;
@@ -93,4 +102,3 @@ int main(int argc, char** argv)
 
 	waitKey(0);
 	return 0;
-}//maxresdefault.jpg
