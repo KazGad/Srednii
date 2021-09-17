@@ -1,11 +1,9 @@
-#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/highgui/highgui.hpp" //
 #include "opencv2/imgproc/imgproc.hpp"
 
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
 #include <string>
 
 using namespace cv;
@@ -31,13 +29,13 @@ int main(int argc, char** argv)
 	img = imread("maxresdefault.jpg", 1);
 	
 	char filename[80];
-	cout << "Ââåäèòå èìÿ ôàéëà, â êîòîðûé õîòèòå âíåñòè èçìåíåíèÿ, è íàæìèòå Enter" << endl;
+	cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¨Ã¬Ã¿ Ã´Ã Ã©Ã«Ã , Ã¢ ÃªÃ®Ã²Ã®Ã°Ã»Ã© ÃµÃ®Ã²Ã¨Ã²Ã¥ Ã¢Ã­Ã¥Ã±Ã²Ã¨ Ã¨Ã§Ã¬Ã¥Ã­Ã¥Ã­Ã¨Ã¿, Ã¨ Ã­Ã Ã¦Ã¬Ã¨Ã²Ã¥ Enter" << endl;
 	cin.getline(filename, 80);
-	cout << "Îòêðûò ôàéë";
+	cout << "ÃŽÃ²ÃªÃ°Ã»Ã² Ã´Ã Ã©Ã«";
 	cout << filename << endl;
 	
-	namedWindow("Èñõîäíîå èçîáðàæåíèå", WINDOW_AUTOSIZE);
-	imshow("Èñõîäíîå èçîáðàæåíèå", img);
+	namedWindow("ÃˆÃ±ÃµÃ®Ã¤Ã­Ã®Ã¥ Ã¨Ã§Ã®Ã¡Ã°Ã Ã¦Ã¥Ã­Ã¨Ã¥", WINDOW_AUTOSIZE);
+	imshow("ÃˆÃ±ÃµÃ®Ã¤Ã­Ã®Ã¥ Ã¨Ã§Ã®Ã¡Ã°Ã Ã¦Ã¥Ã­Ã¨Ã¥", img);
 
 	Mat src_gary;
 	Mat _img;
@@ -51,8 +49,8 @@ int main(int argc, char** argv)
 	cout << otsu_thresh_val;
 	Canny(src_gary, canny_output, lower_thresh_val, high_thresh_val, 3);
 
-	namedWindow("Ñåðîå èçîáðàæåíèå", WINDOW_AUTOSIZE);
-	imshow("Ñåðîå èçîáðàæåíèå", canny_output);
+	namedWindow("Ã‘Ã¥Ã°Ã®Ã¥ Ã¨Ã§Ã®Ã¡Ã°Ã Ã¦Ã¥Ã­Ã¨Ã¥", WINDOW_AUTOSIZE);
+	imshow("Ã‘Ã¥Ã°Ã®Ã¥ Ã¨Ã§Ã®Ã¡Ã°Ã Ã¦Ã¥Ã­Ã¨Ã¥", canny_output);
 	imwrite("canny_output.jpg", canny_output);
 
 	
@@ -76,7 +74,7 @@ int main(int argc, char** argv)
 
 	for (int i = 0; i < contours.size(); i++)
 	{
-		printf("Êîíòóð ¹ %d: öåíòð ìàññ - õ = %.2f, äëèíà - %.2f \n", i,
+		printf("ÃŠÃ®Ã­Ã²Ã³Ã° Â¹ %d: Ã¶Ã¥Ã­Ã²Ã° Ã¬Ã Ã±Ã± - Ãµ = %.2f, Ã¤Ã«Ã¨Ã­Ã  - %.2f \n", i,
 			mu[i].m10 / mu[i].m00, mu[i].m01 / mu[i].m00, arcLength(contours[i], true));
 	}
 
@@ -89,8 +87,8 @@ int main(int argc, char** argv)
 		circle(drawning, mc[i], 4, color, -1, 5, 0);
 	}
 
-	namedWindow("Êîíòóðû", WINDOW_AUTOSIZE);
-	imshow("Êîíòóðû", drawning);
+	namedWindow("ÃŠÃ®Ã­Ã²Ã³Ã°Ã»", WINDOW_AUTOSIZE);
+	imshow("ÃŠÃ®Ã­Ã²Ã³Ã°Ã»", drawning);
 
 	waitKey(0);
 	return 0;
