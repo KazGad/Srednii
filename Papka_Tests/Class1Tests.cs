@@ -14,7 +14,7 @@ namespace ClassLibrary1.Tests
         {
             string password = "Asd123$";
             bool actual = Class1.validatePassword(password);
-            Assert.IsFalse(actual);
+            Assert.IsFalse(actual); //тест, проверяющий, чтобы пароль был не меньше 8 симбволов
         }
 
         [TestMethod()]
@@ -23,7 +23,7 @@ namespace ClassLibrary1.Tests
             string password = "ASDqwe123$";
             bool expected = true;
             bool actual = Class1.validatePassword(password);
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual); //тест проверяющий, что бы пароль от 8 симбволов
         }
 
         [TestMethod()]
@@ -31,7 +31,7 @@ namespace ClassLibrary1.Tests
         {
             string password = "ZXCaSdqwe1234567890$%";
             bool actual = Class1.validatePassword(password);
-            Assert.IsFalse(actual);
+            Assert.IsFalse(actual); //тест проверяющий, что бы пароль был не больше 20 симбволов
         }
 
         [TestMethod()]
@@ -39,7 +39,7 @@ namespace ClassLibrary1.Tests
         {
             string password = "ZXCaSdqwe$";
             bool actual = Class1.validatePassword(password);
-            Assert.IsFalse(actual);
+            Assert.IsFalse(actual); //тест проверяющий, что бы пароль имел числа
         }
 
         [TestMethod()]
@@ -48,7 +48,7 @@ namespace ClassLibrary1.Tests
             string password = "ASDqwe123$";
             bool expected = true;
             bool actual = Class1.validatePassword(password);
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual); //проверочный тест с правильным примером
         }
 
         [TestMethod()]
@@ -56,7 +56,7 @@ namespace ClassLibrary1.Tests
         {
             string password = "ASDqwe123";
             bool actual = Class1.validatePassword(password);
-            Assert.IsFalse(actual);
+            Assert.IsFalse(actual); //тест проверяющий, что бы пароль имел специальные симбволы
         }
 
         [TestMethod()]
@@ -65,7 +65,7 @@ namespace ClassLibrary1.Tests
             string password = "ASDqwe123$";
             bool expected = true;
             bool actual = Class1.validatePassword(password);
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual); //проверочный тест с правильным примером
         }
 
         [TestMethod()]
@@ -73,7 +73,7 @@ namespace ClassLibrary1.Tests
         {
             string password = "asdqwe123$";
             bool actual = Class1.validatePassword(password);
-            Assert.IsFalse(actual);
+            Assert.IsFalse(actual); //тест проверяющий, что бы пароль имел заглавные буквы
         }
 
         [TestMethod()]
@@ -82,7 +82,7 @@ namespace ClassLibrary1.Tests
             string password = "ASDqwe123$";
             bool expected = true;
             bool actual = Class1.validatePassword(password);
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual); //проверочный тест с правильным примером
         }
 
         [TestMethod()]
@@ -90,7 +90,7 @@ namespace ClassLibrary1.Tests
         {
             string password = "ASDQWE123$";
             bool actual = Class1.validatePassword(password);
-            Assert.IsFalse(actual);
+            Assert.IsFalse(actual); //тест проверяющий, что бы пароль имел прописные буквы
         }
 
         [TestMethod()]
@@ -99,7 +99,7 @@ namespace ClassLibrary1.Tests
             string password = "ASDqwe123$";
             bool expected = true;
             bool actual = Class1.validatePassword(password);
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual); //проверочный тест с правильным примером
         }
     }
 }
