@@ -1,4 +1,4 @@
-#include "opencv2/highgui/highgui.hpp" //определяет кросс-платформенные функции взаимодействия с оконной системой
+#include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 
 #include <iostream>
@@ -29,13 +29,13 @@ int main(int argc, char** argv)
 	img = imread("maxresdefault.jpg", 1);
 	
 	char filename[80];
-	cout << "Ââåäèòå èìÿ ôàéëà, â êîòîðûé õîòèòå âíåñòè èçìåíåíèÿ, è íàæìèòå Enter" << endl;
+	cout << "Введите имя файла, в который хотите внести изменения, и нажмите Enter" << endl;
 	cin.getline(filename, 80);
-	cout << "Îòêðûò ôàéë";
+	cout << "Открыт файл";
 	cout << filename << endl;
 	
-	namedWindow("Èñõîäíîå èçîáðàæåíèå", WINDOW_AUTOSIZE);
-	imshow("Èñõîäíîå èçîáðàæåíèå", img);
+	namedWindow("Исходное изображение", WINDOW_AUTOSIZE);
+	imshow("Исходное изображение", img);
 
 	Mat src_gary;
 	Mat _img;
@@ -49,8 +49,8 @@ int main(int argc, char** argv)
 	cout << otsu_thresh_val;
 	Canny(src_gary, canny_output, lower_thresh_val, high_thresh_val, 3);
 
-	namedWindow("Ñåðîå èçîáðàæåíèå", WINDOW_AUTOSIZE);
-	imshow("Ñåðîå èçîáðàæåíèå", canny_output);
+	namedWindow("Серое изображение", WINDOW_AUTOSIZE);
+	imshow("Серое изображение", canny_output);
 	imwrite("canny_output.jpg", canny_output);
 
 	
@@ -74,7 +74,7 @@ int main(int argc, char** argv)
 
 	for (int i = 0; i < contours.size(); i++)
 	{
-		printf("Êîíòóð ¹ %d: öåíòð ìàññ - õ = %.2f, äëèíà - %.2f \n", i,
+		printf("Контур № %d: центр масс - х = %.2f, длина - %.2f \n", i,
 			mu[i].m10 / mu[i].m00, mu[i].m01 / mu[i].m00, arcLength(contours[i], true));
 	}
 
@@ -87,8 +87,9 @@ int main(int argc, char** argv)
 		circle(drawning, mc[i], 4, color, -1, 5, 0);
 	}
 
-	namedWindow("Êîíòóðû", WINDOW_AUTOSIZE);
-	imshow("Êîíòóðû", drawning);
+	namedWindow("Контуры", WINDOW_AUTOSIZE);
+	imshow("Контуры", drawning);
+	imwrite("contour.jpg", drawning);
 
 	waitKey(0);
 	return 0;
