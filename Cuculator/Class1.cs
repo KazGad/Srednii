@@ -29,6 +29,28 @@ namespace Cuculator
                 return n1 - n2;
             if (Sym == "*")
                 return n1 * n2;
+            
+            /*Попробуйте так:
+            if (Sym == "/")
+            {
+                try
+                {
+                    if (n2 == 0)
+                    {
+                        throw new DivideByZeroException("Не делите на ноль!");
+                    }
+                    return n1 / n2;
+                }
+                catch (DivideByZeroException e)
+                {
+                    Console.WriteLine($"Ошибка: {e.Message}");
+                }
+               
+                
+            }
+            
+            
+            */
             if (Sym == "/")
             {
                 try
