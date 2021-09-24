@@ -19,9 +19,9 @@ int main(int argc, char** argv)
 	Point textOrg(100, img.rows / 2); //изменение положения текста по вертикали
 	int fontFace = FONT_HERSHEY_SCRIPT_SIMPLEX; //Стиль текста
 
-	char filename[80];
+	string filename;
 	cout << "Введите имя файла, в который хотите внести изменения, и нажмите Enter" << endl;
-	cin.getline(filename, 80);
+	cin >> filename ;
 	cout << "Открыт файл";
 	cout << filename << endl; //запрашиваем у пользователя название файла
 
@@ -63,7 +63,7 @@ int main(int argc, char** argv)
 	double otsu_thresh_val = threshold(src_gary2, img, 0, 255, THRESH_BINARY | THRESH_OTSU);
 	double high_thresh_val = otsu_thresh_val, lower_thresh_val = otsu_thresh_val * 0.5;
 	cout << otsu_thresh_val;
-	Canny(src_gary1, canny_output, lower_thresh_val, high_thresh_val, 3);
+	Canny(src_gary1, canny_output, lower_thresh_val, high_thresh_val, 3); //определяет пороговую филтрацию
 
 	namedWindow("Серое изображение", WINDOW_AUTOSIZE);
 	imshow("Серое изображение", canny_output);
@@ -74,7 +74,7 @@ int main(int argc, char** argv)
 	vector<vector<Point>> contours; //вектор для контуров
 	vector<Vec4i> hierarchy; //иерархия
 
-	findContours(canny_output, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE, Point(0, 0)); //определяет контуры
+	findContours(canny_output, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE, Point(0, 0)); //определяет контуры, группирует в многоуровневую иерархию, обеспечивает хранение горизонтальных, вертикальных и диагональных сегментов, сохраняя только их конечные точки
 
 	vector<Moments> mu(contours.size());
 	for (int i = 0; i < contours.size(); i++)
@@ -109,3 +109,5 @@ int main(int argc, char** argv)
 
 	waitKey(0);
 	return 0;
+
+}//maxresdefault.jpg
