@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,23 +31,18 @@ namespace Cuculator
                 return n1 * n2;
             if (Sym == "/")
             {
-                try
+                try //попытка выполнения кода
                 {
-                    if (n2 == 0)
+                    if (n2 == 0 || n1 == 0)
                     {
-                        throw new DivideByZeroException("Не делите на ноль!");
+                        throw new DivideByZeroException("Не делите на ноль!"); //вывод исключения
                     }
+                    return n1 / n2;
                 }
-                catch (DivideByZeroException e)
+                catch (DivideByZeroException e) //отлов исключения
                 {
                     Console.WriteLine($"Ошибка: {e.Message}");
                 }
-                Console.Read();
-                /*if (n2 == 0)
-                {
-                    Console.WriteLine(0);
-                }*/
-                return n1 / n2;
             }
             return 0;
         }
