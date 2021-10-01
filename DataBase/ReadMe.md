@@ -18,9 +18,9 @@ Cистема управления базами данных - СУБД, Databas
 
 Использованные типы данных:
  - int;
- - nvarchar(100), nvarchar(MAX), nvarchar(50);
- - nchar(2);
- - varbinary(MAX);
+ - nvarchar(100), nvarchar(MAX), nvarchar(50) - строка переменной длины;
+ - nchar(2) - строка фиксированной длины;
+ - varbinary(MAX) - ;
  - money;
  - bit;
  - datetime.
