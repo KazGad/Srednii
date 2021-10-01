@@ -20,7 +20,7 @@ Cистема управления базами данных - СУБД, Databas
  - int;
  - nvarchar(100), nvarchar(MAX), nvarchar(50) - строка переменной длины;
  - nchar(2) - строка фиксированной длины;
- - varbinary(MAX) - ;
+ - varbinary(MAX) - данные могут различаться по размеру, тип изображения;
  - money;
- - bit;
+ - bit - довичный тип;
  - datetime.
