@@ -39,5 +39,10 @@ namespace Приложение_туров_2
         {
             Мэнеджер.MainFrame.Navigate(new Тесты());
         }
+
+        private void Btn_Click_Hotels(object sender, RoutedEventArgs e)
+        {
+            Мэнеджер.MainFrame.Navigate(new Отели());
+        }
     }
 }

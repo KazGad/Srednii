@@ -22,3 +22,12 @@ C:\Users\Администратор\source\repos\Приложение туров
 C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\Тесты.g.cs
 C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\Картинки.baml
 C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\Тесты.baml
+C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\bin\Debug\EntityFramework.dll
+C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\bin\Debug\EntityFramework.xml
+C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\Приложение туров 2_Content.g.cs
+C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\Приложение туров 2.csproj.CopyComplete
+C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\Отели.g.cs
+C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\Отели.baml
