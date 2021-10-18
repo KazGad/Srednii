@@ -18,10 +18,6 @@ C:\Users\Администратор\source\repos\Приложение туров
 C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\Приложение туров 2.exe
 C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\Приложение туров 2.pdb
 C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\App.baml
-C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\Картинки.g.cs
-C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\Тесты.g.cs
-C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\Картинки.baml
-C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\obj\Debug\Тесты.baml
 C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\bin\Debug\EntityFramework.dll
 C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Администратор\source\repos\Приложение туров 2\Приложение туров 2\bin\Debug\EntityFramework.xml

@@ -23,6 +23,12 @@ namespace Приложение_туров_2
         public Тестирование_и_навигация()
         {
             InitializeComponent();
+            ComboCountries.ItemsSource = SISEntities.GetContext().Country.ToList();
+        }
+
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

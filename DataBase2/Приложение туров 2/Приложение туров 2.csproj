@@ -101,9 +101,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Базовая модель.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Картинки.xaml.cs">
-      <DependentUpon>Картинки.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Мэнеджер.cs" />
     <Compile Include="Отели.xaml.cs">
       <DependentUpon>Отели.xaml</DependentUpon>
@@ -113,9 +110,6 @@
     </Compile>
     <Compile Include="Тестирование и навигация.xaml.cs">
       <DependentUpon>Тестирование и навигация.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Тесты.xaml.cs">
-      <DependentUpon>Тесты.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -129,10 +123,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Картинки.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Отели.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -142,10 +132,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Тестирование и навигация.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Тесты.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

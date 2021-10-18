@@ -13,7 +13,6 @@
             <Button Content="Go" Click="Button_Click"/>
             <Button Content="Picture" Click="Btn_Click_Picture"/>
             <Button Content="Tests" Click="Btn_Click_Tests"/>
-            <Button Content="Hotels" Click="Btn_Click_Hotels"></Button>
         </StackPanel>
         
     </Grid>
