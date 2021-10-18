@@ -23,6 +23,7 @@ namespace Приложение_туров_2
         public Страница_Отелей()
         {
             InitializeComponent();
+            DGridHotels.ItemSource = SISEntities.GetContext().Hotel.ToList;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

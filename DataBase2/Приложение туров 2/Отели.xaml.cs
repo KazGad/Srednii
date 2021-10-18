@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Приложение_туров_2
@@ -17,11 +18,16 @@ namespace Приложение_туров_2
     /// <summary>
     /// Логика взаимодействия для Отели.xaml
     /// </summary>
-    public partial class Отели : Window
+    public partial class Отели : Page
     {
         public Отели()
         {
             InitializeComponent();
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
