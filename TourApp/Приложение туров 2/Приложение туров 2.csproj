@@ -65,49 +65,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Country.cs">
-      <DependentUpon>Базовая модель.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Hotel.cs">
-      <DependentUpon>Базовая модель.tt</DependentUpon>
-    </Compile>
-    <Compile Include="HotelComment.cs">
-      <DependentUpon>Базовая модель.tt</DependentUpon>
-    </Compile>
-    <Compile Include="HotelImage.cs">
-      <DependentUpon>Базовая модель.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Базовая модель.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Tour.cs">
-      <DependentUpon>Базовая модель.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Type.cs">
-      <DependentUpon>Базовая модель.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Базовая модель.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Базовая модель.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Базовая модель.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Базовая модель.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Базовая модель.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Базовая модель.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Картинки.xaml.cs">
       <DependentUpon>Картинки.xaml</DependentUpon>
     </Compile>
     <Compile Include="Мэнеджер.cs" />
-    <Compile Include="Отели.xaml.cs">
-      <DependentUpon>Отели.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Страница Отелей.xaml.cs">
       <DependentUpon>Страница Отелей.xaml</DependentUpon>
     </Compile>
@@ -130,10 +91,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Картинки.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Отели.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -173,13 +130,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="Базовая модель.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Базовая модель.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Базовая модель.edmx.diagram">
-      <DependentUpon>Базовая модель.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -192,18 +142,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\tests.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Базовая модель.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Базовая модель.Context.cs</LastGenOutput>
-      <DependentUpon>Базовая модель.edmx</DependentUpon>
-    </Content>
-    <Content Include="Базовая модель.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Базовая модель.edmx</DependentUpon>
-      <LastGenOutput>Базовая модель.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
