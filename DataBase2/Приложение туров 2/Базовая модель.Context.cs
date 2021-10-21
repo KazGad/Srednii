@@ -15,19 +15,18 @@ namespace Приложение_туров_2
     
     public partial class SISEntities : DbContext
     {
-        private static SISEntities _context;
-
         public SISEntities()
             : base("name=SISEntities")
         {
         }
-
+        public static SISEntities Context;
         public static SISEntities GetContext()
         {
-            if (_context == null)
-                _context = new SISEntities();
-            return _context;
+            if (Context == null)
+                Context = new SISEntities();
+            return Context;
         }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
