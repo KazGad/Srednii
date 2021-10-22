@@ -19,6 +19,7 @@ namespace Приложение_туров_2
             : base("name=SISEntities")
         {
         }
+
         public static SISEntities Context;
         public static SISEntities GetContext()
         {

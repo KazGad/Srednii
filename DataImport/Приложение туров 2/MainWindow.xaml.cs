@@ -42,7 +42,27 @@ namespace Приложение_туров_2
                 var tempTour = new Tour
                 {
                     Name = data[0].Replace("\"", ""),
+                    TicketCount = int.Parse(data[2]),
+                    Price = decimal.Parse(data[3]),
+                    IsActual = (data[4] == "0") ? false : true
+                };
+                foreach (var tourType in data[5].Replace("\"","").Split(new string[] {","}, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    var currentType = SISEntities.GetContext().Type.ToList().FirstOrDefault(p => p.Name == tourType);
+                    if (currentType != null)
+                        tempTour.Type.Add(currentType);
                 }
+                try
+                {
+                    tempTour.ImagePreview = File.ReadAllBytes(image.FirstOrDefault(p => p.Contains(tempTour.Name)));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+                SISEntities.GetContext().Tour.Add(tempTour);
+                SISEntities.GetContext().SaveChanges();
             }
         }
 
