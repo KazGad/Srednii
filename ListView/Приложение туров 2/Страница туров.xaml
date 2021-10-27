@@ -13,7 +13,12 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <ListView Grid.Row="1" Name="LViewTour">
+        <ListView Grid.Row="1" Name="LViewTour" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center"></WrapPanel>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Margin="20" Width="400">
@@ -34,9 +39,9 @@
                         </Image>
                         <TextBlock Text="{Binding Name}" VerticalAlignment="Center" TextAlignment="Center" Width="390"
                                    TextWrapping="Wrap" HorizontalAlignment="Center" Margin="5 5" FontSize="26" Grid.Row="0"></TextBlock>
-                        <TextBlock Text="{Binding Price}" Grid.Row="2" Margin="5 5 5 15" HorizontalAlignment="Center" FontSize="26" FontWeight="Bold"></TextBlock>
-                        <TextBlock Text="{Binding TicketCount}" Grid.Row="3" FontSize="14" HorizontalAlignment="Right"></TextBlock>
-                        <TextBlock Text="{Binding IsActual}" Grid.Row="3" FontSize="14" HorizontalAlignment="Left"></TextBlock>
+                        <TextBlock Text="{Binding Price, StringFormat={}{0:N2} РУБ}" Grid.Row="2" Margin="5 5 5 15" HorizontalAlignment="Center" FontSize="26" FontWeight="Bold"></TextBlock>
+                        <TextBlock Text="{Binding TicketCount, StringFormat={}Билетов осталось:{0}}" Grid.Row="3" FontSize="14" HorizontalAlignment="Right"></TextBlock>
+                        <TextBlock Text="{Binding ActualText}" Grid.Row="3" FontSize="14" HorizontalAlignment="Left"></TextBlock>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

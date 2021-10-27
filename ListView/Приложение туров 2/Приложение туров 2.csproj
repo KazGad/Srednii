@@ -187,7 +187,8 @@
     <Resource Include="Resources\tests.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\maxresdefault.jpg" />
+    <Resource Include="Resources\maxresdefault.jpg" />
+    <None Include="Resources\maxresdefault.png" />
     <Content Include="Базовая модель.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Базовая модель.Context.cs</LastGenOutput>
