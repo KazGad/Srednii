@@ -9,6 +9,7 @@
 
 namespace WebTourAPI.Entities
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -20,6 +21,7 @@ namespace WebTourAPI.Entities
         public string Author { get; set; }
         public System.DateTime CreationDate { get; set; }
     
+        [JsonIgnore]
         public virtual Hotel Hotel { get; set; }
     }
 }

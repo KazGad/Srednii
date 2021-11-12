@@ -22,6 +22,13 @@ namespace WebTourAPI.Controllers
             return db.HotelComment;
         }
 
+        [Route("api/getHotelComments")]
+        public IHttpActionResult GetHotelComments(int hotelId)
+        {
+            var hotelComments = db.HotelComment.ToList().Where(p => p.HotelId == hotelId).ToList();
+            return Ok(hotelComments);
+        }
+
         // GET: api/HotelComments/5
         [ResponseType(typeof(HotelComment))]
         public IHttpActionResult GetHotelComment(int id)
@@ -74,6 +81,15 @@ namespace WebTourAPI.Controllers
         [ResponseType(typeof(HotelComment))]
         public IHttpActionResult PostHotelComment(HotelComment hotelComment)
         {
+            hotelComment.CreationDate = DateTime.Now;
+
+            if (string.IsNullOrWhiteSpace(hotelComment.Author) || hotelComment.Author.Length > 100)
+                ModelState.AddModelError("Author", "Author is required string up to 100 symbols.");
+            if (string.IsNullOrWhiteSpace(hotelComment.Text))
+                ModelState.AddModelError("Text", "Text is required string");
+            if (!(db.Hotel.ToList().FirstOrDefault(p => p.Id == hotelComment.HotelId) is Hotel))
+                ModelState.AddModelError("HotelId", "HotelId is hotel's id from database");
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
