@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XTA.CommetsPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ListView x:Name="LViewComments" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Margin="5" FontAttributes="Bold" FontSize="18" HorizontalOptions="Start" Text="{Binding Author}"></Label>
+                                <Label Margin="5" FontAttributes="Italic" FontSize="18" HorizontalOptions="End" Text="{Binding CreationDate}"></Label>
+                                <Label Margin="5" Grid.Row="1" FontSize="14" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" Text="{Binding Text}"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Entry x:Name="EntryText" HorizontalOptions="FillAndExpand" Margin="5" Placeholder="Введите текст отзыва" Grid.Row="1"
+                       Text="{Binding CurrentComment.Text}"></Entry>
+                <Entry x:Name="EntryAuthor" WidthRequest="200" HorizontalOptions="Start" Margin="5"
+                       Placeholder="Введите имя" Text="{Binding CurrentComment.Author}"></Entry>
+                <Button Text="Отправить" WidthRequest="175" HorizontalOptions="End" Margin="5"
+                        x:Name="BtnSend" Clicked="BtnSend_Clicked"></Button>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

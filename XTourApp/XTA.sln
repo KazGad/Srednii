@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XTA.Android", "XTA\XTA.Android\XTA.Android.csproj", "{2AE84139-C77E-4092-B1BF-F50247A1C356}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XTA", "XTA\XTA\XTA.csproj", "{F389C68D-F33D-434F-BCC3-39FAF941D0D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AE84139-C77E-4092-B1BF-F50247A1C356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AE84139-C77E-4092-B1BF-F50247A1C356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AE84139-C77E-4092-B1BF-F50247A1C356}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2AE84139-C77E-4092-B1BF-F50247A1C356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AE84139-C77E-4092-B1BF-F50247A1C356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AE84139-C77E-4092-B1BF-F50247A1C356}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F389C68D-F33D-434F-BCC3-39FAF941D0D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F389C68D-F33D-434F-BCC3-39FAF941D0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F389C68D-F33D-434F-BCC3-39FAF941D0D2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F389C68D-F33D-434F-BCC3-39FAF941D0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F389C68D-F33D-434F-BCC3-39FAF941D0D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F389C68D-F33D-434F-BCC3-39FAF941D0D2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F793E68-0006-4A5B-B976-1602DE75F441}
+	EndGlobalSection
+EndGlobal
